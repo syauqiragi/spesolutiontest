@@ -1,0 +1,6 @@
+framework module Pods_spesolutiontest {
+  umbrella header "Pods-spesolutiontest-umbrella.h"
+
+  export *
+  module * { export * }
+}

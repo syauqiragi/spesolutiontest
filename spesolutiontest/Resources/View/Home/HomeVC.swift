@@ -13,10 +13,7 @@ import UIKit
 class HomeVC: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    
-    @IBAction func onTapProfile(_ sender: Any) {
-        goProfileVC()
-    }
+    @IBOutlet weak var imageView: UIImageView!
     
     var viewModel: HomeVM = HomeVM()
     var disposeBag: DisposeBag = DisposeBag()
@@ -48,7 +45,7 @@ class HomeVC: UIViewController {
             self.showAlert(message)
         }).disposed(by: disposeBag)
     }
-
+    
     
     private func showAlert(_ message: String) {
         let alert = UIAlertController(title: "Message", message: message, preferredStyle: .alert)
@@ -67,6 +64,15 @@ extension HomeVC {
         tableView.estimatedRowHeight = 100
         
         tableView.register(UINib(nibName: "NewsCellTableViewCell", bundle: nil), forCellReuseIdentifier: "NewsCellTableViewCell")
+        
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+        imageView.isUserInteractionEnabled = true
+        imageView.addGestureRecognizer(tapGestureRecognizer)
+    }
+    
+    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
+    {
+        goProfileVC()
     }
     
     func goProfileVC() {

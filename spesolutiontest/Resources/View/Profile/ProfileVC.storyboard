@@ -78,14 +78,16 @@
                                 <rect key="frame" x="0.0" y="44" width="375" height="144"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qO6-VX-q2e">
-                                        <rect key="frame" x="16" y="16" width="28" height="36"/>
+                                        <rect key="frame" x="8" y="16" width="96" height="36"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="28" id="Bpn-lW-lJF"/>
                                             <constraint firstAttribute="height" constant="36" id="FNG-Bb-E0h"/>
                                         </constraints>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="titleEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="ic_back"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="ic_back" title="   List">
+                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
+                                        </buttonConfiguration>
                                         <connections>
                                             <action selector="tapBack:" destination="684-yv-qAV" eventType="touchUpInside" id="pNK-F2-oMq"/>
                                         </connections>
@@ -96,21 +98,13 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="List" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vgS-MJ-eJX">
-                                        <rect key="frame" x="51.999999999999993" y="23.333333333333329" width="31.666666666666664" height="21.666666666666671"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
                                 <constraints>
                                     <constraint firstItem="qO6-VX-q2e" firstAttribute="top" secondItem="Npz-8C-WFm" secondAttribute="top" constant="16" id="2Zl-hD-xud"/>
-                                    <constraint firstItem="vgS-MJ-eJX" firstAttribute="centerY" secondItem="qO6-VX-q2e" secondAttribute="centerY" id="CXX-Ua-NTp"/>
                                     <constraint firstAttribute="bottom" secondItem="ncr-jW-YvW" secondAttribute="bottom" constant="16" id="GoX-Oj-CqE"/>
                                     <constraint firstAttribute="trailing" secondItem="ncr-jW-YvW" secondAttribute="trailing" constant="16" id="MT8-ec-078"/>
-                                    <constraint firstItem="qO6-VX-q2e" firstAttribute="leading" secondItem="Npz-8C-WFm" secondAttribute="leading" constant="16" id="UEQ-y0-fMX"/>
-                                    <constraint firstItem="vgS-MJ-eJX" firstAttribute="leading" secondItem="qO6-VX-q2e" secondAttribute="trailing" constant="8" id="enj-yP-JbA"/>
+                                    <constraint firstItem="qO6-VX-q2e" firstAttribute="leading" secondItem="Npz-8C-WFm" secondAttribute="leading" constant="8" id="UEQ-y0-fMX"/>
                                     <constraint firstItem="ncr-jW-YvW" firstAttribute="top" secondItem="qO6-VX-q2e" secondAttribute="bottom" constant="28" id="mub-Aa-GAI"/>
                                     <constraint firstItem="ncr-jW-YvW" firstAttribute="leading" secondItem="Npz-8C-WFm" secondAttribute="leading" constant="16" id="vhI-oq-f7C"/>
                                 </constraints>
